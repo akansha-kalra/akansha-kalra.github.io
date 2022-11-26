@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88403851-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script> 
+<script src="page.js"></script> 
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<title>Ben Eysenbach</title>
+</head>
+
+<body>
+<div id="content">  
+  <div id="title">
+    <h1>Ben Eysenbach</h1>
+    <p>
+      PhD Student at CMU<br>
+      beysenba<span style="display:none">spam</span>@cs.cmu.edu<br>
+    <a href="#news">News</a> / <a href="#research">Selected Publications</a> / <a href="#talks">Talks</a> / <a href="#teaching">Teaching</a> / <a href="https://scholar.google.com/citations?user=DRnOvU8AAAAJ">Google Scholar</a> / <a href="https://twitter.com/ben_eysenbach">Twitter</a>
+    </p>
+  </div>
+
+  
+  <div class="container" id="intro">
+<img id='profile-img' style="float:right" src="images/me/headshot.jpg" alt="Ben Eysenbach">
+<p>I'm a PhD student in the Machine Learning Department at Carnegie Mellon University and a student researcher in Google Brain. I am co-advised by <a href="http://www.cs.cmu.edu/~rsalakhu/">Ruslan Salakhutdinov</a> and <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>. My PhD is supported by the National Science Foundation (GFRP) and the Hertz Fellowship. Previously, I was a <a href="https://research.google.com/teams/brain/residency/">Resident</a> at Google Brain.  I studied math and computer science at MIT.<!-- (<a href="bio.html">formal bio</a>)--> <b>I will be on the faculty job market in Fall 2022.</b></p>
+
+<p>
+My research aims to develop principled <b>reinforcement learning (RL) algorithms</b> that obtain state-of-the-art performance with a higher degree of simplicity, scalability, and robustness than current method. Much of my work uses ideas for probabilistic inference to makes progress on a number of problems in RL, such as long horizon reasoning [<a href="https://arxiv.org/pdf/1906.05253.pdf">1</a>,<a href="https://arxiv.org/abs/2110.12080">2</a>], robustness [<a href="https://ben-eysenbach.github.io/rpc/">1</a>,<a href="https://arxiv.org/abs/2103.06257">2</a>], representation learning [<a href="https://ben-eysenbach.github.io/contrastive_rl">1</a>,<a href="https://ben-eysenbach.github.io/contrastive_rl">2</a>,<a href="https://alignedlatentmodels.github.io/">3</a>], and exploration [<a href="https://sites.google.com/view/diayn/">1</a>,<a href="https://sites.google.com/view/state-marginal-matching">2</a>,<a href="https://sites.google.com/corp/view/f-irl/home">3</a>].</p>
+<!--
+<ul class="bullets">
+  <li><em>How can probabilistic inference serve to unify prior algorithms and suggest new ones?</em> [<a href="https://arxiv.org/pdf/2110.02758.pdf">1</a>, <a href="https://arxiv.org/pdf/1906.05253.pdf">2</a>, <a href="https://arxiv.org/pdf/2002.11089.pdf">3</a>, <a href="https://arxiv.org/pdf/1802.06070.pdf">4</a>, <a href="https://arxiv.org/pdf/2110.02719.pdf">5</a>, <a href="https://ben-eysenbach.github.io/c_learning">6</a>, <a href="https://ben-eysenbach.github.io/rce">7</a>]</li>
+  <li><em>What is the relationship between representation learning and decision making?</em> [<a href="https://ben-eysenbach.github.io/contrastive_rl">1</a>, <a href="https://ben-eysenbach.github.io/rpc">2</a>] </li>
+  <li><em>How and when should RL algorithms learn models of the world?</em> [<a href="https://ben-eysenbach.github.io/rpc">1</a>, <a href="https://arxiv.org/pdf/2110.02758.pdf">2</a>]</li>
+  <li><em>What challenges arise when applying RL algorithms to physical systems (e.g., robots)?</em> [<a href="https://arxiv.org/abs/2012.15373">1</a>, <a href="https://arxiv.org/abs/2012.09812">2</a>]</li>
+</ul>
+-->
+<p><em>Research opportunities</em>: I am usually looking for students to help with research projects both during the semester and over the summer. If you are interested, please send me an email. I especially encourage students from underrepresented groups to reach out.</p>
+ 
+
+ 
+   </div>
+
+  <div class="container" id="news">
+    <h2>News</h2>
+    <p> 5 papers were accepted to NeurIPS 2022 (main conference):
+          <ul class="bullets">
+            <li><a href="https://arxiv.org/abs/2110.02758">Mismatched No More: Joint Model-Policy Optimization for Model-Based RL</a>: With Sasha Khazatsky. <a href="https://youtu.be/AbBTq0LON3Q">Video</a>.</li>
+            <li><a href="https://arxiv.org/pdf/2206.07568.pdf">Contrastive Learning as Goal-Conditioned Reinforcement Learning</a>: With <a href="https://tianjunz.github.io/">Tianjun Zhang</a>. <a href="https://youtu.be/5_eGcprfw60">Video</a>.</li>
+            <li><a href="https://arxiv.org/pdf/2206.03378.pdf">Imitating Past Successes can be Very Suboptimal</a> With Soumith Udatha. <a href="https://youtu.be/bXnnU68HYQA">Video</a>.</li>
+            <li><a href="https://arxiv.org/pdf/2206.01367.pdf">Adversarial Unlearning: Reducing Confidence Along Adversarial Directions</a>: Led by <a href="https://ars22.github.io/">Amrith Setlur</a>.</li>
+            <li><a href="Learning Options via Compression">Learning Options via Compression</a>: Led by <a href="https://yidingjiang.github.io/">Yiding Jiang</a> and <a href="https://www.cs.stanford.edu/~evanliu/">Evan Liu</a>.</li>
+          </ul>
+        &emsp; 4 ongoing projects will appear at NeurIPS 2022 workshops:
+          <ul class="bullets">
+            <li><a href="https://openreview.net/forum?id=D3X9jYKpMD">A Connection between One-Step Regularization and Critic Regularization</a>, <a href="https://www.youtube.com/watch?v=1xlixIHZ0R4">Video</a>.</li>
+            <li><a href="https://arxiv.org/abs/2209.08466">Simplifying Model-based RL: Learning Representations, Latent-space Models, and Policies with One Objective</a>, <a href="https://github.com/RajGhugare19/alm">Code</a>. Led by <a href="https://twitter.com/ghugareraj">Raj Ghugare</a>.</li>
+            <li><a href="https://openreview.net/forum?id=-VxdxQULxOh">Contrastive Value Learning: Implicit Models for Simple Offline RL</a>. Led by <a href="https://bmazoure.github.io/">Bogdan Mazoure</a>.</li>
+            <li><a href="https://openreview.net/forum?id=KpGtZorRXX">Bitrate-Constrained DRO: Beyond Worst Case Robustness To Unknown Group Shifts</a>, <a href="https://github.com/RajGhugare19/alm">Code</a>. Led by <a href="https://ars22.github.io/">Amrith Setlur</a>.</li>
+          </ul>
+    </p>
+    <!-- <table id="news-table" style="padding: 0px 20px"></table> -->
+  </div>
+
+
+  <div class="container" id="research">
+    <h2>Selected Publications</h2>
+		<p style="margin: 0px 20px">See <a href="https://scholar.google.com/citations?user=DRnOvU8AAAAJ">Google Scholar</a> for a complete and up-to-date list of publications.</p>
+    <table id="research-table"></table>
+		<!-- <p style="text-align: right">*Equal contribution.</p> -->
+  </div>
+
+  <div class="container" id="talks">
+    <h2>Selected Talks</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=8JZYdWbyhCY">The Information Geometry of Unsupervised Reinforcement Learning</a> (oral at ICLR 2022)</li>
+      <li><a href="https://www.youtube.com/watch?v=7THK9u6UtgE">Replacing Rewards with Examples: Example-Based Policy Search via Recursive Classification</a> (oral at NeurIPS 2021)</li>
+      <li><a href="https://www.youtube.com/watch?v=T57SxBKVxPQ">C-Learning: Learning to Achieve Goals via Recursive Classification</a> (ICLR 2021)</li>
+      <li><a href="https://www.youtube.com/watch?v=lyIVutL-nXY">Rewriting Experience with Inverse RL: Hindsight Inference for Policy Improvement</a> (oral at NeurIPS 2020)</li>
+    </ul>
+  </div>
+ 
+
+  <div class="container" id="teaching">
+    <h2>Teaching</h2>
+    <!-- <table id="teaching-table"></table> -->
+    <ul>
+      <li><a href="https://cmudeeprl.github.io/703website/">10-703: Deep Reinforcement Learning</a>. Head TA in Fall 2019 and Fall 2020.</li>
+      <li><a href="http://web.mit.edu/6.008/www/">6.008: Introduction to Inference</a>. TA in Fall 2016.</li>
+      <li><a href="http://mit.edu/6.042/">6.042: Math for Computer Science</a>. TA in Spring 2015.</li>
+    </ul>
+  </div>
+ 
+ 
+  <!--
+  <div class="container" id="blog">
+    <h2>Assorted Blog Posts</h2>
+    <table id="blog-table"></table>
+    <hr>
+  </div>
+  -->
+
+  <div class="container">
+    <p id="copyright">© 2022 Ben Eysenbach</p>
+  </div>
+
+
+<!-- spacer to expand content div -->
+<div class="spacer" style="clear: both;"></div>
+</div> <!-- end container div -->
+
+</body>
+</html>
+

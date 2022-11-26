@@ -1,0 +1,127 @@
+body {
+    background-color: #f8f8f8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+div#content {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+div#title {
+    text-align: center;
+    display: block;
+}
+
+div.personal-statement {
+    float: left;
+    margin: 0px 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+table#personal-statement-table {
+    margin-top: 15px;
+}
+
+img#profile-img {
+  max-height: 230px;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin: 10px 10px 10px 25px;
+}
+
+div#links {
+    width: 100%
+}
+div#links a {
+    float: left;
+    text-align: center;
+    width: 25%; /* 600 / num_links */
+}
+
+h1 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px 20px;
+}
+
+div#intro p {
+    text-align: justify;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    margin: 10px 0px;
+}
+ul.bullets li {
+    margin: 0px;
+}
+
+span.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+td.image-td {
+    width: 20%;
+    text-align: center;
+}
+td.description-td {
+    width: 70%
+}
+img.project-img {
+    max-width: 150px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
+    border-radius: 3px;
+}
+table {
+    width: 100%;
+}
+div.container {
+    float: left;
+    width: 100%;
+}
+
+a {
+    /* color: #47D; */
+    color: #0C79E8;
+}
+
+div#title a {
+    margin: 0px 5px;
+}
+
+h2 {
+    color: #E87B0C;
+    margin: 10px 20px;
+}
+td#personal-statement-td {
+    width: 70%;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background: #ccc;
+    border-radius: 8px;
+}
+p#copyright {
+    text-align: center;
+    font-size: 12px;
+}
