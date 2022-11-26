@@ -2,37 +2,17 @@ var data = {
     "research": [
     // {
     //     img: 'images/clustervision.png',
-    //     title: 'Clustervision: Visual Supervision of Unsupervised Clustering',
+    //     title: 'Interpretable Reward Learning using Differential Decision Trees',
     //     authors: 'Bum Chul Kwon, Ben Eysenbach, Janu Verma, Kenney Ng, Christopher De Filippi, Walter F Stewart, Adam Perer',
     //     text: 'Designed algorithms for Clustervision, a visual analytics tool that helps ensure data scientists find the right clustering among the large amount of techniques and parameters available. Accepted at IEEE Transactions on Visualization and Computer Graphics. [<a href="http://perer.org/papers/adamPerer-Clustervision-VAST2017.pdf">paper</a>]',
     // },
     //     {
-    //         img: 'images/segment.png',
-    //         title: 'Video Segmentation',
-    //         text: 'Applied deep learning to video segmentation, and implemented image segmentation in JS.  I gave a talk about this project at EECScon 2015, an MIT undergrad conference [2nd place]. [<a href="http://web.mit.edu/bce/www/segment/">demo</a>, <a href="http://web.mit.edu/bce/www/segment_poster.pdf">poster</a>, <a href="http://web.mit.edu/bce/www/segment_slides.pdf">slides</a>, <a href="http://people.csail.mit.edu/bce/readme.html">code</a>]'
-    //     },
-    //     {
     //         img: 'images/uav_small.jpg',
-    //         title: 'Autonomous Quadcopters for Aerial Imaging',
+    //         title: 'Machine Learning on Preemptible Volatile Instances',
     //         text: 'Worked on image analysis and system integration for a research project in the <a href="http://senseable.mit.edu/">Sensible City Lab</a>. [<a href="http://www.dynsyslab.org/portfolio/waterfly/">site</a>, <a href="https://www.youtube.com/watch?v=a0ec5aS_NeA">video</a>]'
     //     }
     ],
     "projects": [
-        {
-            img: 'images/6882.png',
-            title: 'Topic Modeling of Academic Papers at MIT',
-            text: 'For Bayesian Modeling (<a href="http://www.tamarabroderick.com/course_6_882.html">6.882</a>), applied LDA to a new dataset of 100,000+ academic papers written by MIT affiliates. [<a href="http://web.mit.edu/bce/www/lda.pdf">paper</a>, <a href="https://github.com/ben-eysenbach/6.882-LDA">code</a>, <a href="https://github.com/ben-eysenbach/6.882-LDA/blob/master/datasets/dspace.tar.gz?raw=true">data</a>]'
-        },
-        {
-            img: 'images/mmbm.png',
-            title: 'Presentations on Gaussian Processes and Mixed Membership Block Models',
-            text: 'For a seminar on Bayesian Modeling (<a href="http://www.tamarabroderick.com/course_6_882.html">6.882</a>), taught classes on Gaussian Processes and Mixed Membership Block Models. [<a href="https://docs.google.com/presentation/d/1V_rzvHggMqnTNOKzjUvs6EMmaH4qVhYLcRv4CbqHrLI/edit?usp=sharing">GP slides</a>, <a href="https://docs.google.com/presentation/d/1zWM9a_uAeBR_72m4hPkyQOxXoYV_i1FZhfKvE5_5jt8/edit?usp=sharing">MMBM slides</a>]'
-        },
-        {
-            img: 'images/6854_small.jpg',
-            title: 'Exact Recovery of Stochastic Block Models',
-            text: 'Wrote a survey paper on exact recovery for Advanced Algorithms (<a href="http://people.csail.mit.edu/moitra/854.html">6.854</a>). [<a href="http://web.mit.edu/bce/www/sbm.pdf">paper</a>]'
-        },
         {
             img: 'images/dna.png',
             title: 'DNA Compression with Graphical Models',
