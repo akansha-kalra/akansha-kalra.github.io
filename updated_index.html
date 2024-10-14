@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Akansha Kalra" />
+  <title>Akansha Kalra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .avatar-container {
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 150px;
+    }
+
+    .network-icon {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .network-icon li {
+      margin-left: 10px;
+    }
+
+    .network-icon a {
+      color: #1565c0;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .home-section {
+      margin-bottom: 20px;
+    }
+
+    #Education .course {
+    margin-bottom: 5px; /* Reduce the space below the degree name */
+  }
+
+  #Education .institution {
+    margin-top: 0px; /* Ensure no extra space at the top of the institution name */
+  }
+
+    /* Clearfix to ensure proper wrapping */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .author-highlighted {
+      font-weight: bold;
+      color: #007bff; /* Highlight color */
+    }
+
+    .middot-divider {
+      margin: 0 5px;
+    }
+
+    .btn-links .btn {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    /* Adjust the spacing between title and author */
+    .card-simple h3 {
+      margin-bottom: 0;
+    }
+
+    #awards ul li {
+
+    margin-bottom: 10px; /* Adjust the value to control the spacing */
+  }
+
+   #ResearchInterests ul li {
+    margin-bottom: 10px; /* Adjust the value to control the spacing */
+    }
+
+    /* Adjusting space between publication details */
+    .card-simple h3 {
+      margin-bottom: 5px;
+    }
+
+    .article-metadata .pub-publication {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-family : Palatino
+    }
+
+    .article-metadata div {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  </style>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body id="top" class="page-wrapper">
+  <div class="page-header"> <h1> Akansha Kalra</h1> </div>
+  <div class="container clearfix">
+    <div class="avatar-container">
+      <img class="avatar" src="images/20240810_131922.jpg" alt="Akansha Kalra">
+      <ul class="network-icon">
+        <li><a href="mailto:akanshakalracmu@gmail.com" aria-label="envelope"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://x.com/KalraAkansha" target="_blank" rel="noopener" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=QrkO660AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="graduation-cap"><i class="fas fa-graduation-cap"></i></a></li>
+        <li><a href="https://github.com/akansha-kalra" target="_blank" rel="noopener" aria-label="github"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+
+    <section id="About" class="home-section wg-about">
+      <p>I'm a PhD student in the CS program at University of Utah, advised by <a href="https://www.cs.utah.edu/~dsbrown/">Dr. Daniel Brown</a>. I graduated with an MS in Electrical and Computer Engineering from Carnegie Mellon University, where I was very fortunate to work under the guidance of <a href="https://www.andrew.cmu.edu/user/cjoewong/">Dr. Carlee Joe-Wong</a>.</p>
+    </section>
+
+    <section id="Education" class="home-section wg-pages">
+      <h1>Education</h1>
+      <ul>
+        <li>
+          <p class="course">PhD in Computer Science,&nbsp <span> <em>August 2022 - Present (Expected May 2026) </em></span></p>
+          <p class="institution"style="font-family:palantino" > <em><b>University of Utah</b></em></p>
+        </li>
+        <li>
+          <p class="course">M. S. in Electrical and Computer Engineering,&nbsp <span> <em>August 2019 - December 2020</em></span></p>
+          <p class="institution" style="font-family:palantino" > <em><b>Carnegie Mellon University</b></em></p>
+        </li>
+        <li>
+          <p class="course">B.E. in Electronics and Communication Engineering, &nbsp <span> <em>August 2014 - June 2018</em></span></p>
+          <p class="institution"style="font-family:palantino" > <em><b>Panjab University</b></em></p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="ResearchInterests" class="home-section wg-pages">
+      <div class="home-section-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Research Interests</h1>
+          </div>
+          <div class="col-12 col-lg-8">
+            <ul>
+              <li>Reinforcement Learning from Human Feedback (RLHF)</li>
+              <li>Human-AI Interaction and Alignment</li>
+              <li>Applied Reinforcement Learning</li>
+              <li>Interpretability and Explainability in Deep RL (XRL)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="home-section wg-pages">
+      <div class="home-section-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Selected Awards</h1>
+          </div>
+          <div class="col-12 col-lg-8">
+            <ul>
+              <li>2023 - Won <b><em>1st place in Paradigm Challenge at Human-AI Teaming Hackathon</em></b> organized by U.S. Army Research Lab.</li>
+              <li>2023 - Awarded <b><em>Graduate Fellowship from School of Computing, University of Utah. </em></b></li>
+              <li>2018 - Awarded <b><em>Honors degree in B.E. by Panjab University </em></b>, given to top 5 students in the whole department for maintaining the highest GPA throughout 4 years consistently.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="Publications" class="home-section wg-Publications">
+      <h1>Publications</h1>
+      <!-- Publication 1 -->
+      <div class="card-simple">
+        <h3>Can Differentiable Decision Trees Enable Interpretable Reward Learning from Human Feedback?</h3>
+        <div class="article-metadata">
+          <div><span class="author-highlighted">Akansha Kalra</span>, <span>Daniel S. Brown</span></div>
+          <div class="pub-publication" >
+            In <b><em>Reinforcement Learning Journal (RLJ)</em></b> | Presented at the <b><em>Reinforcement Learning Conference (RLC),</em></b> Amherst Massachusetts, August 9–12, 2024
+          </div>
+        </div>
+        <div class="btn-links">
+          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2306.13004" target="_blank" rel="noopener">PDF</a>
+          <a href="https://rlj.cs.umass.edu/2024/papers/Paper237.html" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">Cite</a>
+          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://docs.google.com/presentation/d/120gwlqjC-ENyaE7Yw-fk6GopYXWFD_h-et-YZCE_4oo/edit?usp=sharing" target="_blank" rel="noopener">RLC Oral- Slides</a>
+          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/google-research/google-research/tree/master/social_rl/adversarial_env" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card-simple">
+        <h3>Interpretable Reward Learning via Differentiable Decision Trees</h3>
+        <div class="article-metadata">
+          <div><span class="author-highlighted">Akansha Kalra</span>, <span>Daniel S. Brown</span></div>
+          <div class="pub-publication" >
+             Oral Presentation at <b><em>ML Safety Workshop, NeurIPS 2022 </em></b><br>
+            <u><strong>Refer to RLJ|RLC publication for extended version of this work.</strong> </u>
+            </div>
+          <div class="btn-links">
+            <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2306.13004" target="_blank" rel="noopener">PDF</a>
+          <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:SE6o6Gj0FlIJ:scholar.google.com/&output=citation&scisdr=ClGCwb_aEJTX-G9uMKI:AFWwaeYAAAAAZtpoKKJRTA9Hnl1UTqeclzbPCpI&scisig=AFWwaeYAAAAAZtpoKNWAXm4LiNSvq_iMyOU-bcU&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">Cite</a>
+
+        </div>
+      </div>
+
+         <div class="card-simple">
+        <h3>Machine Learning on Volatile Instances: Convergence, Runtime, and Cost Tradeoffs</h3>
+        <div class="article-metadata">
+          <span> Xiaoxi Zhang,</span> <span>Jianyu Wang,</span><span>Li-Feng Lee</span><span>Tom Yang,</span> <span class="author-highlighted">Akansha Kalra</span>, <span>Gauri Joshi</span>, <span>Carlee Joe-Wong</span>
+          <div class="pub-publication">
+            In <em>IEEE/ACM Transactions on Networking</em> 30.1 (2021): 215-228
+          </div>
+        </div>
+        <div class="btn-links">
+          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9610614" target="_blank" rel="noopener">PDF</a>
+          <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:myPfVrNl4V4J:scholar.google.com/&output=citation&scisdr=ClGCwb_aEJTX-G9m_vc:AFWwaeYAAAAAZtpg5ve8zUFBzNqn4imNxTlRHZA&scisig=AFWwaeYAAAAAZtpg5nPsoFs6o7d-li5cxWF5Qp4&scisf=4&ct=citation&cd=-1&hl=en" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">Cite</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </div>
+</body>
+</html>
