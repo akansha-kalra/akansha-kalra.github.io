@@ -82,7 +82,13 @@
     .paper:first-of-type { padding-top: 5px; }
     .paper:last-child { border-bottom: none; }
     .authors { font-size: .94rem; margin: 3px 0; }
-    .venue { font-size: .92rem; color: var(--muted); margin: 3px 0 8px; }
+.venue {
+  font-size: .92rem;
+  font-style: italic;
+  color: #222222;
+  font-weight: 500;
+  margin: 3px 0 8px;
+}
     .summary { margin: 9px 0; font-size: .96rem; }
     .paper-links { display: flex; flex-wrap: wrap; gap: 7px 15px; font-size: .92rem; }
     .paper-links a { font-weight: 600; }
@@ -202,6 +208,16 @@
 </section>
 <section id="Publications">
 <h2>Selected Research &amp; Publications</h2>
+    <article class="paper paper-grid"><a aria-label="Open research page: Learning from diverse preferences" class="paper-visual" data-theme="plural" href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Pluralistic alignment</span><span class="fallback-symbol">≋</span><span class="fallback-caption">Learning from diverse preferences</span></span><img alt="Visualization of P3L preference representations and personalization" class="media-element" decoding="async" loading="lazy" src="media/p3l-preferences.png"/></a><div class="paper-body">
+<h3>P3L: Learning Pluralistically Aligned Policies from Heterogeneous Crowd Feedback</h3>
+<p class="authors"><span class="me">Akansha Kalra</span>, Ellen Novoseller, Vernon J. Lawhern, Daniel S. Brown</p>
+<p class="venue">Reinforcement Learning Beyond Rewards (RLBrew) Workshop, RLC 2026</p>
+<p class="summary">We learn structured representations of heterogeneous preferences to support personalized reward functions and policies, including few-query adaptation when annotator identities are unavailable during training.</p>
+<div class="paper-links">
+<a href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank">Paper</a>
+</div>
+</div></article>
+    
 <article class="paper paper-grid"><a aria-label="Open research page: Attack transfer across BC policies" class="paper-visual" data-theme="uap" href="https://sites.google.com/view/uap-attacks-on-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Adversarial robustness</span><span class="fallback-symbol">↗</span><span class="fallback-caption">Attack transfer across BC policies</span></span><video aria-label="Robomimic policy demonstration under a universal adversarial perturbation" class="media-element" loop="" muted="" playsinline="" preload="none"><source src="media/uap-demo.mp4" type="video/mp4"/></video></a><div class="paper-body">
 <h3>How Vulnerable Is My Learned Policy? Universal Adversarial Perturbation Attacks on Modern Behavior Cloning Policies</h3>
 <p class="authors"><span class="me">Akansha Kalra*</span>, Basavasagar Patil*, Guanhong Tao, Daniel S. Brown</p>
@@ -214,15 +230,7 @@
 </div>
 <p class="note">* Equal contribution.</p>
 </div></article>
-<article class="paper paper-grid"><a aria-label="Open research page: Learning from diverse preferences" class="paper-visual" data-theme="plural" href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Pluralistic alignment</span><span class="fallback-symbol">≋</span><span class="fallback-caption">Learning from diverse preferences</span></span><img alt="Visualization of P3L preference representations and personalization" class="media-element" decoding="async" loading="lazy" src="media/p3l-preferences.png"/></a><div class="paper-body">
-<h3>P3L: Learning Pluralistically Aligned Policies from Heterogeneous Crowd Feedback</h3>
-<p class="authors"><span class="me">Akansha Kalra</span>, Ellen Novoseller, Vernon J. Lawhern, Daniel S. Brown</p>
-<p class="venue">Reinforcement Learning Beyond Rewards (RLBrew) Workshop, RLC 2026</p>
-<p class="summary">We learn structured representations of heterogeneous preferences to support personalized reward functions and policies, including few-query adaptation when annotator identities are unavailable during training.</p>
-<div class="paper-links">
-<a href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank">Paper</a>
-</div>
-</div></article>
+
 <article class="paper paper-grid"><a aria-label="Open research page: Clean-label backdoor attacks" class="paper-visual" data-theme="poison" href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Dataset poisoning</span><span class="fallback-symbol">⚑</span><span class="fallback-caption">Clean-label backdoor attacks</span></span><img alt="Behavior cloning backdoor poisoning demonstration" class="media-element" decoding="async" loading="lazy" src="media/poisoning-demo.gif"/></a><div class="paper-body">
 <h3>Dataset Poisoning Attacks on Behavioral Cloning Policies</h3>
 <p class="authors"><span class="me">Akansha Kalra</span>, Soumil Datta, Ethan Gilmore, Duc La, Guanhong Tao, Daniel S. Brown</p>
