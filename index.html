@@ -1,327 +1,310 @@
 <!DOCTYPE html>
-<html lang="en-us">
+
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="author" content="Akansha Kalra" />
-  <title>Akansha Kalra</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Akansha Kalra" name="author"/>
+<meta content="Akansha Kalra — PhD candidate at the University of Utah researching human-centered AI, reward learning, adversarial robustness, and pluralistic alignment." name="description"/>
+<title>Akansha Kalra | Research</title>
+<style>
+    :root {
+      --ink: #26333f;
+      --muted: #596675;
+      --accent: #225b8a;
+      --line: #e0e6eb;
+      --background: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      width: 100%;
-    }
-
-    .avatar-container {
-      float: right;
-      margin-left: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .avatar {
-      border-radius: 50%;
-      width: 150px;
-    }
-
-    .network-icon {
-      display: flex;
-      justify-content: flex-end;
-      list-style: none;
-      padding: 0;
       margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--background);
     }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 26px; }
 
-    .network-icon li {
-      margin-left: 10px;
+    /* Research-first, text-left/photo-right header */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 42px;
+      padding: 60px 0 34px;
+      border-bottom: 1px solid var(--line);
     }
-
-    .network-icon a {
-      color: #1565c0;
-      font-size: 24px;
-      text-decoration: none;
+    .profile-text { flex: 1 1 65%; min-width: 0; }
+    .profile-text h1 {
+      margin: 0 0 2px;
+      font-size: 2.45rem;
+      letter-spacing: -.035em;
+      line-height: 1.2;
+      font-weight: 650;
     }
-
-    .home-section {
-      margin-bottom: 20px;
+    .subtitle { margin: 5px 0 22px; color: var(--muted); }
+    .profile-text p { margin: 0 0 15px; }
+    .profile-photo { flex: 0 0 220px; align-self: center; text-align: center; }
+    .profile-photo img {
+      width: 210px;
+      height: 210px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
+    .profile-links { display: flex; flex-wrap: wrap; gap: 8px 21px; margin-top: 22px; }
+    .profile-links a { font-weight: 600; font-size: .96rem; }
 
-    #Education .course {
-    margin-bottom: 5px; /* Reduce the space below the degree name */
-  }
-
-  #Education .institution {
-    margin-top: 0px; /* Ensure no extra space at the top of the institution name */
-  }
-
-    /* Clearfix to ensure proper wrapping */
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      padding: 17px 0;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: .92rem;
     }
-
-    .author-highlighted {
-      font-weight: bold;
-      color: #007bff; /* Highlight color */
+    section { padding-top: 18px; margin-bottom: 25px; scroll-margin-top: 24px; }
+    h2 {
+      font-size: 1.43rem;
+      font-weight: 650;
+      margin: 14px 0 14px;
+      letter-spacing: -.015em;
     }
+    h3 { font-size: 1.05rem; line-height: 1.4; margin: 0 0 5px; }
+    p { margin: 0 0 12px; }
+    .section-intro { color: var(--muted); }
+    .paper { padding: 18px 0 22px; border-bottom: 1px solid var(--line); }
+    .paper:first-of-type { padding-top: 5px; }
+    .paper:last-child { border-bottom: none; }
+    .authors { font-size: .94rem; margin: 3px 0; }
+    .venue { font-size: .92rem; color: var(--muted); margin: 3px 0 8px; }
+    .summary { margin: 9px 0; font-size: .96rem; }
+    .paper-links { display: flex; flex-wrap: wrap; gap: 7px 15px; font-size: .92rem; }
+    .paper-links a { font-weight: 600; }
+    .me { font-weight: 700; }
+    .note { font-size: .89rem; color: var(--muted); }
+    .simple-list { margin: 0; padding-left: 22px; }
+    .simple-list li { padding: 3px 0; }
+    .degree { margin-bottom: 15px; }
+    .degree strong { display: block; }
+    .degree span { color: var(--muted); font-size: .94rem; }
+    footer { border-top: 1px solid var(--line); margin-top: 42px; padding: 22px 0 34px; color: var(--muted); font-size: .9rem; }
 
-    .middot-divider {
-      margin: 0 5px;
+    @media (max-width: 720px) {
+      .container { padding: 0 20px; }
+      .profile-header { flex-direction: column-reverse; gap: 18px; align-items: stretch; padding-top: 28px; }
+      .profile-photo { flex: none; text-align: center; }
+      .profile-photo img { width: 165px; height: 165px; }
+      .profile-text h1 { font-size: 2rem; }
+      .subtitle { margin-bottom: 16px; }
+      .quick-nav { gap: 8px 15px; }
     }
+  
 
-    .btn-links .btn {
-      margin-right: 5px;
-      margin-bottom: 5px;
+    /* Recent news: brief updates rather than a second publication list */
+    .news-list { list-style: none; padding: 0; margin: 0; }
+    .news-list li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px;
+      padding: 9px 0; border-bottom: 1px solid #edf0f3; }
+    .news-list li:last-child { border-bottom: none; }
+    .news-date { font-size: .91rem; color: var(--muted); font-weight: 600; }
+    .news-description { font-size: .97rem; }
+
+    /* Publication thumbnails: one real paper image, GIF, or video per paper. */
+    .paper-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr);
+      align-items: start; gap: 25px; }
+    .paper-body { min-width: 0; }
+    .paper-visual { display: block; position: relative; overflow: hidden; isolation: isolate;
+      width: 100%; aspect-ratio: 4 / 3; border: 1px solid #dce5eb;
+      border-radius: 7px; background: #f1f5f8; text-decoration: none; }
+    .paper-visual:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .paper-visual .media-element { position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: contain; opacity: 0; transition: opacity .2s ease; z-index: 2;
+      background: #fff; }
+    .paper-visual.has-media .media-element { opacity: 1; }
+    .media-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+      justify-content: space-between; padding: 19px 18px; color: #2e526e;
+      background: linear-gradient(145deg, #f0f6fa, #e8eef4); }
+    .media-fallback .fallback-topic { font-size: .7rem; font-weight: 750; text-transform: uppercase;
+      letter-spacing: .13em; }
+    .media-fallback .fallback-symbol { font-size: 3.3rem; line-height: 1;
+      opacity: .40; align-self: flex-end; font-weight: 300; }
+    .media-fallback .fallback-caption { font-weight: 650; font-size: .95rem;
+      line-height: 1.25; max-width: 185px; }
+    .paper-visual[data-theme="poison"] .media-fallback { background: linear-gradient(135deg,#f7f2f1,#efe4e3); color: #7b4e4c; }
+    .paper-visual[data-theme="plural"] .media-fallback { background: linear-gradient(135deg,#f4f2f9,#e8e4f3); color: #595079; }
+    .paper-visual[data-theme="ddt"] .media-fallback { background: linear-gradient(135deg,#f0f6f3,#dfece5); color: #3f6a57; }
+    .paper-visual[data-theme="network"] .media-fallback { background: linear-gradient(135deg,#f3f5f7,#e2e8ed); color: #586e7c; }
+    .paper-visual:hover { border-color: #b0c2d2; }
+    @media (max-width: 720px) {
+      .paper-grid { grid-template-columns: 140px minmax(0,1fr); gap: 16px; }
+      .news-list li { grid-template-columns: 95px minmax(0,1fr); }
+      .media-fallback { padding: 12px; }
+      .media-fallback .fallback-symbol { font-size: 2rem; }
+      .media-fallback .fallback-caption { font-size: .78rem; }
+      .paper-grid h3 { font-size: .99rem; }
     }
-    /* Adjust the spacing between title and author */
-    .card-simple h3 {
-      margin-bottom: 0;
+    @media (max-width: 490px) {
+      .paper-grid { grid-template-columns: 1fr; gap: 12px; }
+      .paper-visual { max-width: 340px; aspect-ratio: 16/9; }
+      .media-fallback .fallback-symbol { font-size: 2.8rem; }
+      .media-fallback .fallback-caption { font-size: .95rem; }
     }
-
-    #awards ul li {
-
-    margin-bottom: 10px; /* Adjust the value to control the spacing */
-  }
-
-   #ResearchInterests ul li {
-    margin-bottom: 10px; /* Adjust the value to control the spacing */
-    }
-
-    /* Adjusting space between publication details */
-    .card-simple h3 {
-      margin-bottom: 5px;
-    }
-
-    .article-metadata .pub-publication {
-      margin-top: 0px;
-      margin-bottom: 5px;
-      font-family : Palatino
-    }
-
-    .article-metadata div {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-  </style>
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</style>
 </head>
+<body id="top">
+  <!-- Research media expected in the repository /media folder. See MEDIA_SETUP.md. -->
 
-<body id="top" class="page-wrapper">
- 
-<div class="container clearfix">
-
-  <header id="About" class="profile-header">
-
-    <!-- LEFT: Name, research bio, and links -->
-    <div class="profile-text">
-
-      <h1>Akansha Kalra</h1>
-
-      <p class="profile-subtitle">
-        PhD Candidate in Computer Science | University of Utah
-      </p>
-
-      <p>
-        I am a PhD candidate in Computer Science at the
-        University of Utah, advised by
-        <a href="https://www.cs.utah.edu/~dsbrown/">
-          Prof. Daniel S. Brown
-        </a>.
-        I expect to graduate in May 2027. Previously, I earned
-        my M.S. in Electrical and Computer Engineering from
-        Carnegie Mellon University.
-      </p>
-
-      <p>
-        My research focuses on developing robust AI systems
-        that learn from human preferences and demonstrations.
-        I investigate three interconnected challenges:
-        interpretable reward learning, adversarial robustness
-        of imitation learning, and pluralistic alignment
-        from heterogeneous human feedback.
-      </p>
-
-
-
-      <nav class="profile-links" aria-label="Profile links">
-
-        <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
-
-        <a href="https://scholar.google.com/citations?user=QrkO660AAAAJ&hl=en"
-           target="_blank" rel="noopener">
-          Google Scholar
-        </a>
-
-        <a href="https://github.com/akansha-kalra"
-           target="_blank" rel="noopener">
-          GitHub
-        </a>
-
-        <a href="mailto:akanshakalracmu@gmail.com">
-          Email
-        </a>
-
-      </nav>
-
-    </div>
-
-    <!-- RIGHT: Existing profile photo -->
-    <div class="profile-photo">
-      <img class="avatar"
-           src="images/20240810_131922.jpg"
-           alt="Akansha Kalra">
-    </div>
-
-  </header>
-
-    <section id="Education" class="home-section wg-pages">
-      <h1>Education</h1>
-      <ul>
-        <li>
-          <p class="course">PhD in Computer Science,&nbsp <span> <em>August 2022 - Present (Expected May 2027) </em></span></p>
-          <p class="institution"style="font-family:palantino" > <em><b>University of Utah</b></em></p>
-        </li>
-        <li>
-          <p class="course">M. S. in Electrical and Computer Engineering,&nbsp <span> <em>August 2019 - December 2020</em></span></p>
-          <p class="institution" style="font-family:palantino" > <em><b>Carnegie Mellon University</b></em></p>
-        </li>
-        <li>
-          <p class="course">B.E. in Electronics and Communication Engineering, &nbsp <span> <em>August 2014 - June 2018</em></span></p>
-          <p class="institution"style="font-family:palantino" > <em><b>Panjab University</b></em></p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="ResearchInterests" class="home-section wg-pages">
-      <div class="home-section-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">Research Interests</h1>
-          </div>
-          <div class="col-12 col-lg-8">
-            <ul>
-              <li>Reinforcement Learning from Human Feedback (RLHF)</li>
-              <li>Human-AI Interaction and Alignment</li>
-              <li>Applied Reinforcement Learning</li>
-              <li>Interpretability and Explainability in Deep RL (XRL)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="awards" class="home-section wg-pages">
-      <div class="home-section-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">Selected Awards</h1>
-          </div>
-          <div class="col-12 col-lg-8">
-            <ul>
-              <li>2023 - Won <b><em>1st place in Paradigm Challenge at Human-AI Teaming Hackathon</em></b> organized by U.S. Army Research Lab.</li>
-              <li>2022 - Awarded <b><em>Graduate Fellowship from School of Computing, University of Utah. </em></b></li>
-              <li>2018 - Awarded <b><em>Honors degree in B.E. by Panjab University </em></b>, given to top 5 students in the whole department for maintaining the highest GPA throughout 4 years consistently.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="Publications" class="home-section wg-Publications">
-      <h1>Publications</h1>
-      <!-- Publication 1 -->
-      
-      <div class="card-simple">
-        <h3>How Vulnerable is My Learned Policy? Universal Adversarial Perturbation Attacks On Modern Behavior Cloning Policies</h3>
-        <div class="article-metadata">
-          <div><span class="author-highlighted"> Akansha Kalra<sup>*</sup></span>,<span> Basavasagar Patil<sup>*</sup>,</span><span> Guanhong Tao</span>,<span> Daniel S. Brown</span></div>
-          <div class="pub-publication">
-    <span style="color: red;">
-        Accepted at <b><em>IEEE International Conference on Systems, Man, and Cybernetics (SMC) 2026</em></b>
-    </span>
-    (Proceedings details coming soon!)<br>
+<main class="container">
+<header class="profile-header" id="About">
+<div class="profile-text">
+<h1>Akansha Kalra</h1>
+<p class="subtitle">PhD Candidate in Computer Science · University of Utah</p>
+<p>
+          I am a PhD candidate at the University of Utah, advised by
+          <a href="https://www.cs.utah.edu/~dsbrown/">Prof. Daniel S. Brown</a>.
+          I expect to graduate in May 2027. Previously, I earned an M.S. in
+          Electrical and Computer Engineering from Carnegie Mellon University,
+          where I worked with <a href="https://www.andrew.cmu.edu/user/cjoewong/">Prof. Carlee Joe-Wong</a>.
+        </p>
+<p>
+          My research focuses on developing reliable AI systems that learn from human
+          preferences and demonstrations. I investigate three interconnected challenges:
+          <strong>interpreting learned reward functions</strong>,
+          <strong>understanding adversarial vulnerabilities in imitation learning</strong>, and
+          <strong>aligning policies with diverse human preferences</strong>.
+        </p>
+<p>
+          My ongoing work explores the robustness of personalized and pluralistic
+          alignment, including how to distinguish malicious feedback from legitimate
+          differences in human preferences.
+        </p>
+<nav aria-label="Academic and contact links" class="profile-links">
+<a href="https://scholar.google.com/citations?user=QrkO660AAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+<a href="https://github.com/akansha-kalra" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a href="https://x.com/KalraAkansha" rel="noopener noreferrer" target="_blank">X / Twitter</a>
+<a href="mailto:akanshakalracmu@gmail.com">Email</a>
+</nav>
 </div>
-          
-       
-          <div class="btn-links">
-              <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2502.03698v2" target="_blank" rel="noopener">PDF</a> 
-                 <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://sites.google.com/view/uap-attacks-on-bc" target="_blank" rel="noopener">Website</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/akansha-kalra/Univ-Pertubation-Attacks-on-Modern-BC-Algos" target="_blank" rel="noopener">Code</a>
-          </div>
-      </div>
-       <div class="card-simple">
-        <h3>Dataset Poisoning Attacks on Behavioral Cloning Policies</h3>
-        <div class="article-metadata">
-          <div><span class="author-highlighted"> Akansha Kalra</span>,<span> Soumil Datta,</span><span> Ethan Gilmore,</span> <span>Duc La,</span><span> Guanhong Tao</span>,<span> Daniel S. Brown</span></div>
-          <div class="pub-publication" >
-             Accepted at <b><em>EAI-International Conference on Security and Privacy in Cyber-Physical Systems and Smart Vehicles 2025 </b>(Proceedings details coming soon!) </em><br>
-           
-            </div>
-            <div class="btn-links">
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2511.20992" target="_blank" rel="noopener">PDF</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://docs.google.com/presentation/d/1_TgQCRm-9qRHeT_l_HZHP9T041SAgM7VQIZT68hzIh4/edit?usp=sharing" target="_blank" rel="noopener">SmartSP- Slides</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://sites.google.com/view/dataset-poisoning-in-bc" target="_blank" rel="noopener">Website</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/akansha-kalra/DatasetPoisoning-Backdoor-Attacks-BC-SmartSP2025" target="_blank" rel="noopener">Code</a>
-<!--           <div class="btn-links"> -->
-<!--             <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2306.13004" target="_blank" rel="noopener">PDF</a> -->
-         </div> 
-      </div>
-        
-      <div class="card-simple">
-        <h3>Can Differentiable Decision Trees Enable Interpretable Reward Learning from Human Feedback?</h3>
-        <div class="article-metadata">
-          <div><span class="author-highlighted">Akansha Kalra</span>, <span>Daniel S. Brown</span></div>
-          <div class="pub-publication" >
-            In <b><em>Reinforcement Learning Journal (RLJ)</em></b> | Presented at the <b><em>Reinforcement Learning Conference (RLC),</em></b> Amherst Massachusetts, August 9–12, 2024
-          </div>
-        </div>
-        <div class="btn-links">
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2306.13004" target="_blank" rel="noopener">PDF</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://docs.google.com/presentation/d/120gwlqjC-ENyaE7Yw-fk6GopYXWFD_h-et-YZCE_4oo/edit?usp=sharing" target="_blank" rel="noopener">RLC Oral- Slides</a>
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://sites.google.com/view/ddt-rlhf/" target="_blank" rel="noopener">Website</a>
- 
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/akansha-kalra/RLC2024-DDT-Reward-Learning" target="_blank" rel="noopener">Code</a>
-        </div>
-      </div>
+<div class="profile-photo">
+<img alt="Akansha Kalra" height="210" src="images/20240810_131922.jpg" width="210"/>
+</div>
+</header>
+<nav aria-label="Page sections" class="quick-nav"><a href="#news">Recent News</a><a href="#Publications">Research &amp; Publications</a><a href="#awards">Awards</a></nav><section aria-labelledby="news-heading" id="news">
+<h2 id="news-heading">Recent News</h2>
+<ul class="news-list">
+<li><span class="news-date">October 2026</span><span class="news-description">Presented our research on universal adversarial attacks against modern behavior-cloning policies at <strong>IEEE SMC 2026</strong>.</span></li>
+<li><span class="news-date">2026</span><span class="news-description">Our <a href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank">P3L work</a> on personalized alignment from heterogeneous crowd feedback appeared at the <strong>RLC RLBrew Workshop</strong>.</span></li>
+<li><span class="news-date">2025</span><span class="news-description">Our <a href="https://arxiv.org/abs/2511.20992" rel="noopener noreferrer" target="_blank">dataset-poisoning research</a> was accepted at <strong>EAI SmartSP 2025</strong> (Springer proceedings dated 2027).</span></li>
+<li><span class="news-date">2024</span><span class="news-description">Our <a href="https://arxiv.org/pdf/2306.13004" rel="noopener noreferrer" target="_blank">interpretable reward-learning paper</a> appeared in the <strong>Reinforcement Learning Journal / RLC 2024</strong>.</span></li>
+</ul>
+</section>
+<section id="Publications">
+<h2>Selected Research &amp; Publications</h2>
+<article class="paper paper-grid"><a aria-label="Open research page: Attack transfer across BC policies" class="paper-visual" data-theme="uap" href="https://sites.google.com/view/uap-attacks-on-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Adversarial robustness</span><span class="fallback-symbol">↗</span><span class="fallback-caption">Attack transfer across BC policies</span></span><video aria-label="Robomimic policy demonstration under a universal adversarial perturbation" class="media-element" loop="" muted="" playsinline="" preload="none"><source src="media/uap-demo.mp4" type="video/mp4"/></video></a><div class="paper-body">
+<h3>How Vulnerable Is My Learned Policy? Universal Adversarial Perturbation Attacks on Modern Behavior Cloning Policies</h3>
+<p class="authors"><span class="me">Akansha Kalra*</span>, Basavasagar Patil*, Guanhong Tao, Daniel S. Brown</p>
+<p class="venue">IEEE International Conference on Systems, Man, and Cybernetics (SMC), 2026</p>
+<p class="summary">We evaluated universal adversarial perturbations across five classical and modern behavior-cloning algorithms, finding substantial vulnerabilities and cross-algorithm black-box transferability.</p>
+<div class="paper-links">
+<a href="https://arxiv.org/abs/2502.03698v2" rel="noopener noreferrer" target="_blank">Paper</a>
+<a href="https://sites.google.com/view/uap-attacks-on-bc" rel="noopener noreferrer" target="_blank">Project</a>
+<a href="https://github.com/akansha-kalra/Univ-Pertubation-Attacks-on-Modern-BC-Algos" rel="noopener noreferrer" target="_blank">Code</a>
+</div>
+<p class="note">* Equal contribution.</p>
+</div></article>
+<article class="paper paper-grid"><a aria-label="Open research page: Learning from diverse preferences" class="paper-visual" data-theme="plural" href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Pluralistic alignment</span><span class="fallback-symbol">≋</span><span class="fallback-caption">Learning from diverse preferences</span></span><img alt="Visualization of P3L preference representations and personalization" class="media-element" decoding="async" loading="lazy" src="media/p3l-preferences.png"/></a><div class="paper-body">
+<h3>P3L: Learning Pluralistically Aligned Policies from Heterogeneous Crowd Feedback</h3>
+<p class="authors"><span class="me">Akansha Kalra</span>, Ellen Novoseller, Vernon J. Lawhern, Daniel S. Brown</p>
+<p class="venue">Reinforcement Learning Beyond Rewards (RLBrew) Workshop, RLC 2026</p>
+<p class="summary">We learn structured representations of heterogeneous preferences to support personalized reward functions and policies, including few-query adaptation when annotator identities are unavailable during training.</p>
+<div class="paper-links">
+<a href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank">Paper</a>
+</div>
+</div></article>
+<article class="paper paper-grid"><a aria-label="Open research page: Clean-label backdoor attacks" class="paper-visual" data-theme="poison" href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Dataset poisoning</span><span class="fallback-symbol">⚑</span><span class="fallback-caption">Clean-label backdoor attacks</span></span><img alt="Behavior cloning backdoor poisoning demonstration" class="media-element" decoding="async" loading="lazy" src="media/poisoning-demo.gif"/></a><div class="paper-body">
+<h3>Dataset Poisoning Attacks on Behavioral Cloning Policies</h3>
+<p class="authors"><span class="me">Akansha Kalra</span>, Soumil Datta, Ethan Gilmore, Duc La, Guanhong Tao, Daniel S. Brown</p>
+<p class="venue">EAI SmartSP 2025 · Springer LNICST, vol. 699 (proceedings dated 2027)</p>
+<p class="summary">We investigated clean-label backdoor poisoning of behavior-cloning policies and introduced an entropy-based test-time triggering strategy to activate backdoors at critical states.</p>
+<div class="paper-links">
+<a href="https://arxiv.org/abs/2511.20992" rel="noopener noreferrer" target="_blank">Paper</a>
+<a href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank">Project</a>
+<a href="https://github.com/akansha-kalra/DatasetPoisoning-Backdoor-Attacks-BC-SmartSP2025" rel="noopener noreferrer" target="_blank">Code</a>
+<a href="https://docs.google.com/presentation/d/1_TgQCRm-9qRHeT_l_HZHP9T041SAgM7VQIZT68hzIh4/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Slides</a>
+</div>
+</div></article>
+<article class="paper paper-grid"><a aria-label="Open research page: Interpretable reward trees" class="paper-visual" data-theme="ddt" href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Reward interpretability</span><span class="fallback-symbol">⑂</span><span class="fallback-caption">Interpretable reward trees</span></span><img alt="Differentiable decision tree learned reward visualization" class="media-element" decoding="async" loading="lazy" src="media/ddt-reward-tree.png"/></a><div class="paper-body">
+<h3>Can Differentiable Decision Trees Enable Interpretable Reward Learning from Human Feedback?</h3>
+<p class="authors"><span class="me">Akansha Kalra</span>, Daniel S. Brown</p>
+<p class="venue">Reinforcement Learning Journal (RLJ) / Reinforcement Learning Conference (RLC), 2024</p>
+<p class="summary">I developed and evaluated differentiable decision-tree reward models with hybrid explanations, demonstrating how interpretable reward functions can help identify silent misalignment that task performance alone may conceal.</p>
+<div class="paper-links">
+<a href="https://arxiv.org/pdf/2306.13004" rel="noopener noreferrer" target="_blank">Paper</a>
+<a href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank">Project</a>
+<a href="https://github.com/akansha-kalra/RLC2024-DDT-Reward-Learning" rel="noopener noreferrer" target="_blank">Code</a>
+<a href="https://docs.google.com/presentation/d/120gwlqjC-ENyaE7Yw-fk6GopYXWFD_h-et-YZCE_4oo/edit?usp=sharing" rel="noopener noreferrer" target="_blank">RLC oral slides</a>
+</div>
+<p class="note">Earlier version: “Interpretable Reward Learning via Differentiable Decision Trees,” ML Safety Workshop, NeurIPS 2022 (oral presentation).</p>
+</div></article>
+<article class="paper paper-grid"><a aria-label="Open research page: Learning on volatile instances" class="paper-visual" data-theme="network" href="https://ieeexplore.ieee.org/abstract/document/9610614" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Efficient training</span><span class="fallback-symbol">⌁</span><span class="fallback-caption">Learning on volatile instances</span></span><img alt="Runtime and cost trade-offs for machine learning on volatile instances" class="media-element" decoding="async" loading="lazy" src="media/volatile-instances.png"/></a><div class="paper-body">
+<h3>Machine Learning on Volatile Instances: Convergence, Runtime, and Cost Tradeoffs</h3>
+<p class="authors">Xiaoxi Zhang, Jianyu Wang, Li-Feng Lee, Tom Yang, <span class="me">Akansha Kalra</span>, Gauri Joshi, Carlee Joe-Wong</p>
+<p class="venue">IEEE/ACM Transactions on Networking, 2022</p>
+<div class="paper-links">
+<a href="https://ieeexplore.ieee.org/abstract/document/9610614" rel="noopener noreferrer" target="_blank">Paper</a>
+</div>
+</div></article>
+</section>
 
-      <div class="card-simple">
-        <h3>Interpretable Reward Learning via Differentiable Decision Trees</h3>
-        <div class="article-metadata">
-          <div><span class="author-highlighted">Akansha Kalra</span>, <span>Daniel S. Brown</span></div>
-          <div class="pub-publication" >
-             Oral Presentation at <b><em>ML Safety Workshop, NeurIPS 2022 </em></b><br>
-            <u><strong>Refer to RLJ|RLC publication for extended version of this work.</strong> </u>
-            </div>
-          <div class="btn-links">
-            <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2306.13004" target="_blank" rel="noopener">PDF</a>
-        </div>
-      </div>
-
-         <div class="card-simple">
-        <h3>Machine Learning on Volatile Instances: Convergence, Runtime, and Cost Tradeoffs</h3>
-        <div class="article-metadata">
-          <span> Xiaoxi Zhang,</span> <span>Jianyu Wang,</span><span>Li-Feng Lee</span><span>Tom Yang,</span> <span class="author-highlighted">Akansha Kalra</span>, <span>Gauri Joshi</span>, <span>Carlee Joe-Wong</span>
-          <div class="pub-publication">
-            In <em>IEEE/ACM Transactions on Networking</em> 30.1 (2021): 215-228
-          </div>
-        </div>
-        <div class="btn-links">
-          <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9610614" target="_blank" rel="noopener">PDF</a>
-        </div>
-      </div>
-    </section>
-
-
-
-
-  </div>
-</body>
+<section id="awards">
+<h2>Selected Awards</h2>
+<ul class="simple-list">
+<li><strong>First Place, Paradigm Challenge</strong>, Human-AI Teaming Hackathon, 2023.</li>
+<li><strong>Graduate Fellowship</strong>, School of Computing, University of Utah, 2022.</li>
+<li><strong>Honors Degree</strong>, Panjab University, 2018.</li>
+</ul>
+</section>
+<footer>
+      Akansha Kalra · <a href="mailto:akanshakalracmu@gmail.com">Email</a> ·
+      <a href="#top">Back to top</a>
+</footer>
+</main>
+<script>
+  // Show research media only after it has loaded; missing files display a tasteful fallback.
+  // Each media item becomes visible automatically after you upload its file to /media.
+  document.querySelectorAll('.paper-visual').forEach(function(frame) {
+    const media = frame.querySelector('.media-element');
+    if (!media) return;
+    const markReady = () => frame.classList.add('has-media');
+    const markMissing = () => frame.classList.remove('has-media');
+    if (media.tagName === 'IMG') {
+      if (media.complete && media.naturalWidth > 0) markReady();
+      media.addEventListener('load', markReady);
+      media.addEventListener('error', markMissing);
+    } else if (media.tagName === 'VIDEO') {
+      media.addEventListener('loadeddata', markReady);
+      media.addEventListener('error', markMissing);
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if ('IntersectionObserver' in window && !reducedMotion) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              media.play().catch(function() {});
+            } else {
+              media.pause();
+            }
+          });
+        }, {rootMargin: '120px'});
+        observer.observe(frame);
+      } else if (!reducedMotion) {
+        media.play().catch(function() {});
+      }
+    }
+  });
+</script></body>
 </html>
