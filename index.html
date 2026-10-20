@@ -160,6 +160,34 @@
       .media-fallback .fallback-symbol { font-size: 2.8rem; }
       .media-fallback .fallback-caption { font-size: .95rem; }
     }
+    
+.research-section {
+  margin-top: 32px;
+  margin-bottom: 36px;
+}
+
+.research-section p {
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.research-directions {
+  margin: 18px 0;
+}
+
+.research-directions p {
+  margin-bottom: 12px;
+}
+
+.research-directions strong {
+  color: #222;
+  font-weight: 600;
+}
+.postdoc-note {
+  color: #b42318;
+  font-weight: 600;
+  margin-top: 12px;
+}
 </style>
 </head>
 <body id="top">
@@ -177,13 +205,13 @@
           Electrical and Computer Engineering from Carnegie Mellon University,
           where I worked with <a href="https://www.andrew.cmu.edu/user/cjoewong/">Prof. Carlee Joe-Wong</a>.
         </p>
-<p>
-          My research focuses on developing reliable AI systems that learn from human
-          preferences and demonstrations. I investigate three interconnected challenges:
-          <strong>interpreting learned reward functions</strong>,
-          <strong>understanding adversarial vulnerabilities in imitation learning</strong>, and
-          <strong>aligning policies with diverse human preferences</strong>.
-        </p>
+
+    <p class="postdoc-note">
+  I am currently seeking postdoctoral research opportunities
+  starting in 2027 in human–AI alignment, reinforcement learning,
+  and robot learning.
+</p>
+
 
 <nav aria-label="Academic and contact links" class="profile-links">
 <a href="https://scholar.google.com/citations?user=QrkO660AAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">Google Scholar</a>
@@ -197,7 +225,36 @@
 <img alt="Akansha Kalra" height="210" src="images/20240810_131922.jpg" width="210"/>
 </div>
 </header>
-<nav aria-label="Page sections" class="quick-nav"><a href="#news">Recent News</a><a href="#Publications">Research &amp; Publications</a><a href="#awards">Awards</a></nav><section aria-labelledby="news-heading" id="news">
+<nav aria-label="Page sections" class="quick-nav"><a href="#news">Recent News</a><a href="#Publications">Research &amp; Publications</a><a href="#awards">Awards</a></nav>
+    
+<section id="research" class="research-section">
+  <h2>Research</h2>
+
+  <p>
+    My research aims to develop AI agents that can reliably learn
+    and adapt to human objectives from preferences and demonstrations.
+    While learning from human feedback offers a promising alternative
+    to manually specifying objectives and behaviors, it does not
+    guarantee alignment with human intent. An agent may optimize a misaligned reward without exhibiting obvious failures, a policy learned from demonstrations may be vulnerable to adversarial manipulation, and feedback aggregated across users may obscure legitimate differences in individual objectives.
+My PhD tackles these challenges along three complementary directions:
+  <div class="research-directions">
+    <p>
+<strong>Interpreting what agents learn</strong>: Developing interpretable reward representations to identify unintended objectives and diagnose silent misalignment.</p>
+ <p>
+<strong>Understanding when learned behavior fails</strong>: Investigating adversarial vulnerabilities in imitation learning and the reliability of learned policies.</p>
+ <p>
+<strong>Personalizing whose preferences agents serve</strong>: Learning individualized rewards and policies from heterogeneous crowd feedback without requiring annotator identities.</p>
+<p>
+My long-term vision is to bring these directions together to advance interpretable, robust, and personalized AI systems and robots that learn reliably from human preferences and demonstrations, remain aligned with diverse human objectives, and adapt effectively to users in real-world environments.
+    
+ 
+    </p>
+  </div>
+</section>
+
+    
+    
+    <section aria-labelledby="news-heading" id="news">
 <h2 id="news-heading">Recent News</h2>
 <ul class="news-list">
 <li><span class="news-date">October 2026</span><span class="news-description">Presented our research on universal adversarial attacks against modern behavior-cloning policies at <strong>IEEE SMC 2026</strong>.</span></li>
