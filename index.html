@@ -107,7 +107,7 @@
     .degree span { color: var(--muted); font-size: .94rem; }
     footer { border-top: 1px solid var(--line); margin-top: 42px; padding: 22px 0 34px; color: var(--muted); font-size: .9rem; }
 
-    @ (max-width: 720px) {
+    @media (max-width: 720px) {
       .container { padding: 0 20px; }
       .profile-header { flex-direction: column-reverse; gap: 18px; align-items: stretch; padding-top: 28px; }
       .profile-photo { flex: none; text-align: center; }
@@ -134,31 +134,21 @@
       width: 100%; aspect-ratio: 4 / 3; border: 1px solid #dce5eb;
       border-radius: 7px; background: #f1f5f8; text-decoration: none; }
     .paper-visual:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-   .paper-visual .media-element {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  opacity: 0;
-  transition: opacity .2s ease;
-  z-index: 2;
-  background: #fff;
-}
-    .paper-visual.has-media.media-element { opacity: 1; }
-    .-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+    .paper-visual .media-element { position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: contain; opacity: 1; transition: opacity .2s ease; z-index: 2;
+      background: #fff; }
+    .paper-visual.has-media .media-element { opacity: 1; }
+    .media-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
       justify-content: space-between; padding: 19px 18px; color: #2e526e;
       background: linear-gradient(145deg, #f0f6fa, #e8eef4); }
-    .-fallback .fallback-topic { font-size: .7rem; font-weight: 750; text-transform: uppercase;
+    .media-fallback .fallback-topic { font-size: .7rem; font-weight: 750; text-transform: uppercase;
       letter-spacing: .13em; }
-    .-fallback .fallback-symbol { font-size: 3.3rem; line-height: 1;
+    .media-fallback .fallback-symbol { font-size: 3.3rem; line-height: 1;
       opacity: .40; align-self: flex-end; font-weight: 300; }
-    .-fallback .fallback-caption { font-weight: 650; font-size: .95rem;
+    .media-fallback .fallback-caption { font-weight: 650; font-size: .95rem;
       line-height: 1.25; max-width: 185px; }
     .paper-visual[data-theme="poison"] .media-fallback { background: linear-gradient(135deg,#f7f2f1,#efe4e3); color: #7b4e4c; }
-    .paper-visual[data-theme=""] .media-fallback { background: linear-gradient(135deg,#f4f2f9,#e8e4f3); color: #595079; }
+    .paper-visual[data-theme="plural"] .media-fallback { background: linear-gradient(135deg,#f4f2f9,#e8e4f3); color: #595079; }
     .paper-visual[data-theme="ddt"] .media-fallback { background: linear-gradient(135deg,#f0f6f3,#dfece5); color: #3f6a57; }
     .paper-visual[data-theme="network"] .media-fallback { background: linear-gradient(135deg,#f3f5f7,#e2e8ed); color: #586e7c; }
     .paper-visual:hover { border-color: #b0c2d2; }
@@ -225,7 +215,7 @@
 </style>
 </head>
 <body id="top">
-  <!-- Research media expected in the repository /media folder. See MEDIA_SETUP.md. -->
+  <!-- Publication images are stored in the /images folder. -->
 
 <main class="container">
 <header class="profile-header" id="About">
@@ -241,7 +231,7 @@
         </p>
 
     <p class="postdoc-note">
-  I am currently seeking postdoctoral research opportunities starting in Summer/Fall 2027 at the intersection of Human–AI alignment, Reinforcement Learning from Human Feedback(RLHF), Imitation learning and robot learning, with particular interests in istic Alignment, AI safety and Robustness, and Interpretability. 
+  I am currently seeking postdoctoral research opportunities starting in Summer/Fall 2027 at the intersection of Human–AI alignment, Reinforcement Learning from Human Feedback(RLHF), Imitation learning and robot learning, with particular interests in Pluralistic Alignment, AI safety and Robustness, and Interpretability. 
         
         
 </p>
@@ -259,7 +249,7 @@
 <img alt="Akansha Kalra" height="210" src="images/20240810_131922.jpg" width="210"/>
 </div>
 </header>
-<nav aria-label="Page sections" class="quick-nav"><a href="#news">Research Interests</a><a href="#news">Recent News</a><a href="#Publications">Research &amp; Publications</a><a href="#awards">Awards</a></nav>
+<nav aria-label="Page sections" class="quick-nav"><a href="#research">Research Interests</a><a href="#news">Recent News</a><a href="#Publications">Research &amp; Publications</a><a href="#awards">Awards</a></nav>
     
 
 <section id="research" class="research-section">
@@ -334,14 +324,12 @@
 </div>
 </div></article>
     
-<article class="paper paper-grid"><a aria-label="Open research page: Attack transfer across BC policies" class="paper-visual" data-theme="uap" href="https://sites.google.com/view/uap-attacks-on-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Adversarial robustness</span><span class="fallback-symbol">↗</span><span class="fallback-caption">Attack transfer across BC policies</span></span><img
+<article class="paper paper-grid"><div class="paper-visual" data-theme="uap"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Adversarial robustness</span><span class="fallback-symbol">↗</span><span class="fallback-caption">Attack transfer across BC policies</span></span><img
   class="media-element"
   src="images/uap-figure.png"
-  alt="Universal Adversarial Perturbation attacks on Iimitation Learning policies"
+  alt="Universal Adversarial Perturbation attacks on imitation-learning policies"
   loading="lazy"
-/>
-    </a><div class="paper-body">
-<h3>How Vulnerable Is My Learned Policy? Universal Adversarial Perturbation Attacks on Modern Behavior Cloning Policies</h3>
+/></div><div class="paper-body"><h3>How Vulnerable Is My Learned Policy? Universal Adversarial Perturbation Attacks on Modern Behavior Cloning Policies</h3>
 <p class="authors"><span class="me">Akansha Kalra*</span>, Basavasagar Patil*, Guanhong Tao, Daniel S. Brown</p>
 <p class="venue">IEEE International Conference on Systems, Man, and Cybernetics (SMC), 2026</p>
 <p class="summary">TL;DR: We present the first systematic study of adversarial attacks, across a range of both classic and recently proposed imitation learning algorithms, including Vanilla Behavior Cloning (Vanilla BC), LSTM-GMM, Implicit Behavior Cloning (IBC), Diffusion Policy (DP), and Vector-Quantized Behavior Transformer (VQ-BET) to white-box, grey-box, and black-box transfer adversarial perturbation attacks.</p>
@@ -353,16 +341,16 @@
 <p class="note">* Equal contribution.</p>
 </div></article>
 
-<article class="paper paper-grid"><a aria-label="Open research page: Clean-label backdoor attacks" class="paper-visual" data-theme="poison" href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Dataset poisoning</span><span class="fallback-symbol">⚑</span><span class="fallback-caption">Clean-label backdoor attacks</span></span><img
+<article class="paper paper-grid"><div class="paper-visual" data-theme="poison"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Dataset poisoning</span><span class="fallback-symbol">⚑</span><span class="fallback-caption">Clean-label backdoor attacks</span></span><img
   class="media-element"
   src="images/poisoning-figure.png"
   alt="Clean-label backdoor attacks on behavior cloning policies"
   loading="lazy"
-/></a><div class="paper-body">
+/></div><div class="paper-body">
 <h3>Dataset Poisoning Attacks on Behavioral Cloning Policies</h3>
 <p class="authors"><span class="me">Akansha Kalra</span>, Soumil Datta, Ethan Gilmore, Duc La, Guanhong Tao, Daniel S. Brown</p>
 <p class="venue">EAI SmartSP 2025 · Springer LNICST, vol. 699 (proceedings dated 2027)</p>
-<p class="summary">TL;DR: We conduct the first study and discussion of clean-label backdoor poisoning o in imitation learning and introduce a novel entropy-based test-time trigger attack that substantially degrades policy performance by identifying critical states where test-time triggering of the backdoor is expected to be most effective at degrading policy performance.</p>
+<p class="summary">TL;DR: We conduct the first study and discussion of clean-label backdoor poisoning in imitation learning and introduce a novel entropy-based test-time trigger attack that substantially degrades policy performance by identifying critical states where test-time triggering of the backdoor is expected to be most effective at degrading policy performance.</p>
 <div class="paper-links">
 <a href="https://arxiv.org/abs/2511.20992" rel="noopener noreferrer" target="_blank">Paper</a>
 <a href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank">Project</a>
@@ -370,11 +358,11 @@
 <a href="https://docs.google.com/presentation/d/1_TgQCRm-9qRHeT_l_HZHP9T041SAgM7VQIZT68hzIh4/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Slides</a>
 </div>
 </div></article>
-<article class="paper paper-grid"><a aria-label="Open research page: Interpretable reward trees" class="paper-visual" data-theme="ddt" href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Reward interpretability</span><span class="fallback-symbol">⑂</span><span class="fallback-caption">Interpretable reward trees</span></span><img alt="Differentiable decision tree learned reward visualization" class="media-element" decoding="async" loading="lazy" src="images/ddt-reward-tree.png"/></a><div class="paper-body">
+<article class="paper paper-grid"><div class="paper-visual" data-theme="ddt"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Reward interpretability</span><span class="fallback-symbol">⑂</span><span class="fallback-caption">Interpretable reward trees</span></span><img alt="Differentiable decision tree learned reward visualization" class="media-element" decoding="async" loading="lazy" src="images/ddt-reward-tree.png"/></div><div class="paper-body">
 <h3>Can Differentiable Decision Trees Enable Interpretable Reward Learning from Human Feedback?</h3>
 <p class="authors"><span class="me">Akansha Kalra</span>, Daniel S. Brown</p>
 <p class="venue">Reinforcement Learning Journal (RLJ) / Reinforcement Learning Conference (RLC), 2024</p>
-<p class="TLDR">TL;DR: We introduce a novel reward learning framework to learn an interpretable reward function from human preferences without requiring any hand-crafting of the input feature space, demonstrating how interpretable reward functions can help identify silent misalignment that in-distribution downstream RL policy performance alone may conceal.</p>
+<p class="summary">TL;DR: We introduce a novel reward learning framework to learn an interpretable reward function from human preferences without requiring any hand-crafting of the input feature space, demonstrating how interpretable reward functions can help identify silent misalignment that in-distribution downstream RL policy performance alone may conceal.</p>
 <div class="paper-links">
 <a href="https://arxiv.org/pdf/2306.13004" rel="noopener noreferrer" target="_blank">Paper</a>
 <a href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank">Project</a>
@@ -384,11 +372,11 @@
     <p class="note venue-workshop">Earlier version: “Interpretable Reward Learning via Differentiable Decision Trees,” ML Safety Workshop, NeurIPS 2022 (Oral).</p>
 
 </div></article>
-<article class="paper paper-grid"><a aria-label="Open research page: Learning on volatile instances" class="paper-visual" data-theme="network" href="https://ieeexplore.ieee.org/abstract/document/9610614" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Efficient training</span><span class="fallback-symbol">⌁</span><span class="fallback-caption">Learning on volatile instances</span></span><img alt="Runtime and cost trade-offs for machine learning on volatile instances" class="media-element" decoding="async" loading="lazy" src="media/volatile-instances.png"/></a><div class="paper-body">
+<article class="paper paper-grid"><div class="paper-visual" data-theme="network"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Efficient training</span><span class="fallback-symbol">⌁</span><span class="fallback-caption">Learning on volatile instances</span></span><img alt="Runtime and cost trade-offs for machine learning on volatile instances" class="media-element" decoding="async" loading="lazy" src="images/volatile-instances.png"/></div><div class="paper-body">
 <h3>Machine Learning on Volatile Instances: Convergence, Runtime, and Cost Tradeoffs</h3>
 <p class="authors">Xiaoxi Zhang, Jianyu Wang, Li-Feng Lee, Tom Yang, <span class="me">Akansha Kalra</span>, Gauri Joshi, Carlee Joe-Wong</p>
 <p class="venue">IEEE/ACM Transactions on Networking, 2022</p>
-<p class="TLDR">TL;DR: We quantify the performance trade-offs between error, cost, and training time for volatile cloud instances and develop cost-aware training strategies for ML models using preemptible cloud instances.</p>
+<p class="summary">TL;DR: We quantify the performance trade-offs between error, cost, and training time for volatile cloud instances and develop cost-aware training strategies for ML models using preemptible cloud instances.</p>
 <div class="paper-links">
 <a href="https://ieeexplore.ieee.org/abstract/document/9610614" rel="noopener noreferrer" target="_blank">Paper</a>
 </div>
@@ -410,14 +398,14 @@
 </main>
 <script>
   // Show research media only after it has loaded; missing files display a tasteful fallback.
-  // Each media item becomes visible automatically after you upload its file to /media.
+  // Missing publication figures use the built-in fallback. Images load from /images.
   document.querySelectorAll('.paper-visual').forEach(function(frame) {
     const media = frame.querySelector('.media-element');
     if (!media) return;
-    const markReady = () => frame.classList.add('has-media');
-    const markMissing = () => frame.classList.remove('has-media');
+    const markReady = () => { frame.classList.add('has-media'); media.style.display = 'block'; };
+    const markMissing = () => { frame.classList.remove('has-media'); media.style.display = 'none'; };
     if (media.tagName === 'IMG') {
-      if (media.complete && media.naturalWidth > 0) markReady();
+      if (media.complete) { if (media.naturalWidth > 0) markReady(); else markMissing(); }
       media.addEventListener('load', markReady);
       media.addEventListener('error', markMissing);
     } else if (media.tagName === 'VIDEO') {
