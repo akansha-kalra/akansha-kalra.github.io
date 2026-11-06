@@ -134,9 +134,19 @@
       width: 100%; aspect-ratio: 4 / 3; border: 1px solid #dce5eb;
       border-radius: 7px; background: #f1f5f8; text-decoration: none; }
     .paper-visual:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-    .paper-visual .-element { position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: contain; opacity: 0; transition: opacity .2s ease; z-index: 2;
-      background: #fff; }
+   .paper-visual .media-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: 2;
+  background: #fff;
+}
     .paper-visual.has- .-element { opacity: 1; }
     .-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
       justify-content: space-between; padding: 19px 18px; color: #2e526e;
