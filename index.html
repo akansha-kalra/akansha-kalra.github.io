@@ -107,7 +107,7 @@
     .degree span { color: var(--muted); font-size: .94rem; }
     footer { border-top: 1px solid var(--line); margin-top: 42px; padding: 22px 0 34px; color: var(--muted); font-size: .9rem; }
 
-    @media (max-width: 720px) {
+    @ (max-width: 720px) {
       .container { padding: 0 20px; }
       .profile-header { flex-direction: column-reverse; gap: 18px; align-items: stretch; padding-top: 28px; }
       .profile-photo { flex: none; text-align: center; }
@@ -134,18 +134,18 @@
       width: 100%; aspect-ratio: 4 / 3; border: 1px solid #dce5eb;
       border-radius: 7px; background: #f1f5f8; text-decoration: none; }
     .paper-visual:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-    .paper-visual .media-element { position: absolute; inset: 0; width: 100%; height: 100%;
+    .paper-visual .-element { position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: contain; opacity: 0; transition: opacity .2s ease; z-index: 2;
       background: #fff; }
-    .paper-visual.has-media .media-element { opacity: 1; }
-    .media-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+    .paper-visual.has- .-element { opacity: 1; }
+    .-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
       justify-content: space-between; padding: 19px 18px; color: #2e526e;
       background: linear-gradient(145deg, #f0f6fa, #e8eef4); }
-    .media-fallback .fallback-topic { font-size: .7rem; font-weight: 750; text-transform: uppercase;
+    .-fallback .fallback-topic { font-size: .7rem; font-weight: 750; text-transform: uppercase;
       letter-spacing: .13em; }
-    .media-fallback .fallback-symbol { font-size: 3.3rem; line-height: 1;
+    .-fallback .fallback-symbol { font-size: 3.3rem; line-height: 1;
       opacity: .40; align-self: flex-end; font-weight: 300; }
-    .media-fallback .fallback-caption { font-weight: 650; font-size: .95rem;
+    .-fallback .fallback-caption { font-weight: 650; font-size: .95rem;
       line-height: 1.25; max-width: 185px; }
     .paper-visual[data-theme="poison"] .media-fallback { background: linear-gradient(135deg,#f7f2f1,#efe4e3); color: #7b4e4c; }
     .paper-visual[data-theme="plural"] .media-fallback { background: linear-gradient(135deg,#f4f2f9,#e8e4f3); color: #595079; }
@@ -313,7 +313,7 @@
 </section>
 <section id="Publications">
 <h2>Selected Research &amp; Publications</h2>
-    <article class="paper paper-grid"><a aria-label="Open research page: Learning from diverse preferences" class="paper-visual" data-theme="plural" href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Pluralistic alignment</span><span class="fallback-symbol">≋</span><span class="fallback-caption">Learning from diverse preferences</span></span><img alt="Visualization of P3L preference representations and personalization" class="media-element" decoding="async" loading="lazy" src="media/p3l-preferences.png"/></a><div class="paper-body">
+    <article class="paper paper-grid"><a aria-label="Open research page: Learning from diverse preferences" class="paper-visual" data-theme="plural" href="https://openreview.net/forum?id=oAw85OXuc3" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Pluralistic alignment</span><span class="fallback-symbol">≋</span><span class="fallback-caption">Learning from diverse preferences</span></span><img alt="Visualization of P3L preference representations and personalization" class="media-element" decoding="async" loading="lazy" src="images/p3l-preferences.png"/></a><div class="paper-body">
 <h3>Steerable Pluralistic Policy Alignment from Anonymized Crowd Feedback.</h3>
 <p class="authors"><span class="me">Akansha Kalra</span>, Ellen Novoseller, Vernon J. Lawhern, Daniel S. Brown</p>
         <p class="note venue-workshop">Earlier version: “P3L: Learning Pluralistically Aligned Policies from Heterogeneous Crowd Feedback”, Reinforcement Learning Beyond Rewards (RLBrew) Workshop, RLC 2026.</p>
@@ -326,7 +326,7 @@
     
 <article class="paper paper-grid"><a aria-label="Open research page: Attack transfer across BC policies" class="paper-visual" data-theme="uap" href="https://sites.google.com/view/uap-attacks-on-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Adversarial robustness</span><span class="fallback-symbol">↗</span><span class="fallback-caption">Attack transfer across BC policies</span></span><img
   class="media-element"
-  src="media/uap-figure.png"
+  src="images/uap-figure.png"
   alt="Universal Adversarial Perturbation attacks on Iimitation Learning policies"
   loading="lazy"
 />
@@ -345,7 +345,7 @@
 
 <article class="paper paper-grid"><a aria-label="Open research page: Clean-label backdoor attacks" class="paper-visual" data-theme="poison" href="https://sites.google.com/view/dataset-poisoning-in-bc" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Dataset poisoning</span><span class="fallback-symbol">⚑</span><span class="fallback-caption">Clean-label backdoor attacks</span></span><img
   class="media-element"
-  src="media/poisoning-figure.png"
+  src="images/poisoning-figure.png"
   alt="Clean-label backdoor attacks on behavior cloning policies"
   loading="lazy"
 /></a><div class="paper-body">
@@ -360,7 +360,7 @@
 <a href="https://docs.google.com/presentation/d/1_TgQCRm-9qRHeT_l_HZHP9T041SAgM7VQIZT68hzIh4/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Slides</a>
 </div>
 </div></article>
-<article class="paper paper-grid"><a aria-label="Open research page: Interpretable reward trees" class="paper-visual" data-theme="ddt" href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Reward interpretability</span><span class="fallback-symbol">⑂</span><span class="fallback-caption">Interpretable reward trees</span></span><img alt="Differentiable decision tree learned reward visualization" class="media-element" decoding="async" loading="lazy" src="media/ddt-reward-tree.png"/></a><div class="paper-body">
+<article class="paper paper-grid"><a aria-label="Open research page: Interpretable reward trees" class="paper-visual" data-theme="ddt" href="https://sites.google.com/view/ddt-rlhf/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="media-fallback"><span class="fallback-topic">Reward interpretability</span><span class="fallback-symbol">⑂</span><span class="fallback-caption">Interpretable reward trees</span></span><img alt="Differentiable decision tree learned reward visualization" class="media-element" decoding="async" loading="lazy" src="images/ddt-reward-tree.png"/></a><div class="paper-body">
 <h3>Can Differentiable Decision Trees Enable Interpretable Reward Learning from Human Feedback?</h3>
 <p class="authors"><span class="me">Akansha Kalra</span>, Daniel S. Brown</p>
 <p class="venue">Reinforcement Learning Journal (RLJ) / Reinforcement Learning Conference (RLC), 2024</p>
